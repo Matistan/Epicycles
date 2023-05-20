@@ -287,6 +287,7 @@ public class Main extends ApplicationAdapter {
 		}
 		for(int i = signalLimit; i < signal.size(); i++) {
 			signal.remove(i);
+			i--;
 		}
 		N = signalLimit;
 	}
