@@ -199,17 +199,13 @@ public class Main extends ApplicationAdapter {
 				radius = epicycles.get(i).radius;
 				offset = epicycles.get(i).phase;
 				freq = epicycles.get(i).freq;
-				if(i < 300) {
-					r.circle(px * zoom, py * zoom, radius * zoom);
-				}
+				r.circle(px * zoom, py * zoom, radius * zoom);
 				prevx = px;
 				prevy = py;
 				px += (float) (Math.cos(freq * time + offset) * radius);
 				py += (float) (Math.sin(freq * time + offset) * radius);
-				if(i < 300) {
-					r.setColor(255, 165, 0, 1f);
-					r.line(prevx * zoom, prevy * zoom, px * zoom, py * zoom);
-				}
+				r.setColor(255, 165, 0, 1f);
+				r.line(prevx * zoom, prevy * zoom, px * zoom, py * zoom);
 				r.setColor(255, 255, 255, 1f);
 				for(int j = (int) (time * N / (2 * Math.PI)); j <= N; j++) {
 					if(j > 0) {
