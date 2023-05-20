@@ -12,6 +12,7 @@ public class DesktopLauncher {
 		config.setForegroundFPS(60);
 		config.setTitle("Epicycles");
 		config.setWindowedMode(SCREEN_WIDTH, SCREEN_HEIGHT);
+		config.setResizable(false);
 		new Lwjgl3Application(new Main(), config);
 	}
 }
